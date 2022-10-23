@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/zuhedshaikh95/zuhedshaikh95.github.io/static/css/main.964fdded.css",
+    "main.js": "/zuhedshaikh95/zuhedshaikh95.github.io/static/js/main.617ef4bf.js",
+    "static/js/787.8e12d08c.chunk.js": "/zuhedshaikh95/zuhedshaikh95.github.io/static/js/787.8e12d08c.chunk.js",
+    "index.html": "/zuhedshaikh95/zuhedshaikh95.github.io/index.html",
+    "main.964fdded.css.map": "/zuhedshaikh95/zuhedshaikh95.github.io/static/css/main.964fdded.css.map",
+    "main.617ef4bf.js.map": "/zuhedshaikh95/zuhedshaikh95.github.io/static/js/main.617ef4bf.js.map",
+    "787.8e12d08c.chunk.js.map": "/zuhedshaikh95/zuhedshaikh95.github.io/static/js/787.8e12d08c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.617ef4bf.js"
+  ]
+}
