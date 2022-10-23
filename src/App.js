@@ -6,6 +6,7 @@ function App() {
       <h1>Zuhed Shaikh</h1>
       <p>Full Stack Web Developer</p>
       <em>React App</em>
+      <p>Okay, the app is Really hosted</p>
     </div>
   );
 }
