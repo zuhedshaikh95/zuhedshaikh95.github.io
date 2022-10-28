@@ -15,7 +15,7 @@ const initialForm = {
 
 const Footer = () => {
   const [formData, setFormData] = useState(initialForm);
-  const [isSubmit, setIsSubmit] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(true);
   const [isLoading, setLoading] = useState(false);
 
   const { name, email, phone, message } = formData;

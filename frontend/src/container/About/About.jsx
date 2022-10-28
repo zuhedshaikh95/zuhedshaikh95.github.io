@@ -1,56 +1,49 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 
-import { urlFor, client } from "../../client";
+import timelineElements from "./timelineElements";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { images } from "../../constants";
+import { FaGraduationCap } from "react-icons/fa";
+import "react-vertical-timeline-component/style.min.css";
 import "./About.scss";
 
+const styleIcon = {
+  background: "#f9c74f",
+};
+
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
-
-    client.fetch(query).then((data) => setAbouts(data));
-  }, []);
-
-  console.log(abouts);
-
   return (
     <>
       <h2 className="head-text">
-        I Know That <span>Good Apps</span>
-        <br />
-        means <span>Good Business</span>
+        All about <span>Me</span>
       </h2>
 
-      <div className="app__profiles">
-        {abouts.map((about, index) => (
-          <motion.div
-            key={index}
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: "tween" }}
-            className="app__profile-item"
+      <VerticalTimeline className="app__timeline-container">
+        {timelineElements.map((elem) => (
+          <VerticalTimelineElement
+            key={elem.id}
+            date={elem.date}
+            dateClassName="timeline-date"
+            iconStyle={styleIcon}
+            icon={<FaGraduationCap />}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>
-              {about.title}
-            </h2>
-            <p className="p-text" style={{ marginTop: 10 }}>
-              {about.description}
-            </p>
-          </motion.div>
+            <h3 className="vertical-timeline-element-title">{elem.title}</h3>
+            <h4 className="app__university p-text">{elem.university}</h4>
+            <h5 className="vertical-timeline-element-subtitle">
+              {elem.location}
+            </h5>
+          </VerticalTimelineElement>
         ))}
-      </div>
+      </VerticalTimeline>
     </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(About, 'app__about'), 
+  MotionWrap(About, "app__about"),
   "about",
   "app__whitebg"
-  );
+);

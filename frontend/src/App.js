@@ -1,4 +1,4 @@
-import { About, Footer, Header, Skills, Testimonials, Work } from "./container";
+import { About, Calendar, Footer, Header, Skills, Testimonials, Work } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
 
@@ -10,6 +10,7 @@ export default function App() {
       <About />
       <Work />
       <Skills />
+      <Calendar />
       {/* <Testimonials /> */}
       <Footer />
     </div>

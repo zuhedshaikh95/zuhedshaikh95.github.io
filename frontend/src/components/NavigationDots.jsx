@@ -1,4 +1,4 @@
-const links = ["home", "about", "work", "skills", "contacts"];
+const links = ["home", "about", "work", "skills", "calendar", "contacts"];
 
 export default function NavgationDots({ active }) {
   return (
