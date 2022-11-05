@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.556b5216.css",
-    "main.js": "/static/js/main.1aeca1ac.js",
+    "main.css": "/static/css/main.c2477865.css",
+    "main.js": "/static/js/main.19b72092.js",
     "static/media/zuhed.png": "/static/media/zuhed.d7823ce0f1231ddabbb2.png",
     "static/media/about04.png": "/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "static/media/about02.png": "/static/media/about02.7a3df03410ee756268ec.png",
@@ -30,11 +30,11 @@
     "static/media/mongodb.svg": "/static/media/mongodb.1aca075d5cce0819fea7ea0902d94ce4.svg",
     "index.html": "/index.html",
     "static/media/circle.svg": "/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
-    "main.556b5216.css.map": "/static/css/main.556b5216.css.map",
-    "main.1aeca1ac.js.map": "/static/js/main.1aeca1ac.js.map"
+    "main.c2477865.css.map": "/static/css/main.c2477865.css.map",
+    "main.19b72092.js.map": "/static/js/main.19b72092.js.map"
   },
   "entrypoints": [
-    "static/css/main.556b5216.css",
-    "static/js/main.1aeca1ac.js"
+    "static/css/main.c2477865.css",
+    "static/js/main.19b72092.js"
   ]
 }
