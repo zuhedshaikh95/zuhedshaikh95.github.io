@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
@@ -15,7 +15,7 @@ const initialForm = {
 
 const Footer = () => {
   const [formData, setFormData] = useState(initialForm);
-  const [isSubmit, setIsSubmit] = useState(true);
+  const [isSubmit, setIsSubmit] = useState(false);
   const [isLoading, setLoading] = useState(false);
 
   const { name, email, phone, message } = formData;
@@ -42,13 +42,15 @@ const Footer = () => {
 
     client.create(contact).then(() => {
       setLoading(false);
-      isSubmit(false);
+      setIsSubmit(true);
     });
   };
 
   return (
     <>
-      <h2 id="contacts" className="head-text">Take a coffee & chat with me</h2>
+      <h2 id="contacts" className="head-text">
+        Take a coffee & chat with me
+      </h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card">
@@ -65,7 +67,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {isSubmit ? (
+      {!isSubmit ? (
         <div className="app__footer-form app__flex">
           <div className="app__flex">
             <input
@@ -113,11 +115,13 @@ const Footer = () => {
         </div>
       ) : (
         <div>
-          <motion.h2 
-          className="head-text"
-          whileInView={{y: [200, 0], opacity: [0, 1]}}
-          transition={{duration: 0.7}}
-          >Thank You for getting in touch!</motion.h2>
+          <motion.h2
+            className="head-text"
+            whileInView={{ y: [200, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.7 }}
+          >
+            Thank You for getting in touch!
+          </motion.h2>
         </div>
       )}
     </>
